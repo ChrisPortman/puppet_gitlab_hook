@@ -1,0 +1,9 @@
+[Unit]
+PartOf=gitlab-hook.service
+
+[Socket]
+ListenStream=0.0.0.0:8190
+
+[Install]
+WantedBy=sockets.target
+

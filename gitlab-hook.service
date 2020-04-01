@@ -1,0 +1,12 @@
+[Unit]
+After=network.target gitlab-hook.socket
+Requires=gitlab-hook.socket
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/gitlab-hook
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+
